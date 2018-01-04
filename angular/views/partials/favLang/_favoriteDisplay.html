@@ -1,0 +1,36 @@
+<div class="content">
+  <div id="favorites">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1
+        col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+        <h2 id="favorite-title" data-ng-bind="favoriteTitle"></h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row highchart-row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1
+        col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+        <div id="chart-display"></div>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1
+        col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+        <button id="js-btn" class="btn btn-default btn-lg"
+          data-ng-click="vote('javascript')">
+            <i id="js-btn-img"></i>
+        </button>
+        <button id="rb-btn" class="btn btn-default btn-lg"
+          data-ng-click="vote('ruby')">
+            <i id="rb-btn-img"></i>
+        </button>
+        <button id="php-btn" class="btn btn-default btn-lg"
+          data-ng-click="vote('php')">
+            <i id="php-btn-img"></i>
+        </button>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

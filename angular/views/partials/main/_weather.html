@@ -1,0 +1,18 @@
+<div class="row" data-ng-controller="WeatherController">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+    <div class="weather">
+      <a id="weather-btn" href="{{wundergroundLink}}" target="_blank">
+        <img id="wundergroundPic" data-ng-src="{{wunderground}}">
+      </a>
+      <div class="weather-margin-top">
+        <div id="weatherDisplay">
+          <span><img data-ng-src="{{weather.icon}}"></span>
+          <span data-ng-bind="weather.location"></span> -
+          <span data-ng-bind="weather.temp"></span>&#8457
+        </div>
+        <data-ng-include src="'partials/weather/_weatherLocation.html'">
+        </data-ng-include>
+      </div>
+    </div>
+  </div>
+</div>

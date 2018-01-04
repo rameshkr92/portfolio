@@ -1,0 +1,40 @@
+#testing {
+  margin-top: 100px;
+}
+#testing hr {
+  background: #333333;
+  background-image: -webkit-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -moz-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -ms-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -o-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+#testing h3,
+#testing h4,
+#testing h5 {
+  color: #337ab7;
+  font-weight: bold;
+}
+#testing h4 {
+  margin-bottom: 15px;
+}
+#testing h5 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+#e2e p {
+  color: #337ab7;
+}
+#testing li {
+  list-style-type: none;
+}
+#iPadWarning h3 {
+  color: #fe2e2e;
+}
+#unit a {
+  color: #fe2e2e;
+  text-decoration: underline;
+}

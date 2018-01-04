@@ -1,0 +1,94 @@
+(function(){
+  'use strict';
+
+  var Base = require('./../../../page-objects/base');
+  var base = new Base();
+  var LoginPage = require('./../../../page-objects/users/loginPage');
+  var loginpage = new LoginPage();
+  var RegisterPage = require('./../../../page-objects/users/registerPage');
+  var registerpage = new RegisterPage();
+  var el;
+
+  /* Protractor specs for end-to-end testing */
+  describe('Registration Page - success', function(){
+    it('should enable button when valid input is entered.', function(){
+      el = element(by.id('register-btn'));
+      registerpage.clear();
+      // registerpage.setFirstName(registerpage.testFirstName);
+      registerpage.setFirstName('T');
+      browser.sleep(150);
+      registerpage.setFirstName('e');
+      browser.sleep(150);
+      registerpage.setFirstName('s');
+      browser.sleep(150);
+      registerpage.setFirstName('t');
+      browser.sleep(350);
+      // registerpage.setLastName(registerpage.testLastName);
+      registerpage.setLastName('Z');
+      browser.sleep(150);
+      registerpage.setLastName('e');
+      browser.sleep(150);
+      registerpage.setLastName('t');
+      browser.sleep(150);
+      registerpage.setLastName('a');
+      browser.sleep(350);
+      // registerpage.setUsername(registerpage.testUsername);
+      registerpage.setUsername('Te');
+      browser.sleep(150);
+      registerpage.setUsername('st');
+      browser.sleep(150);
+      registerpage.setUsername('yU');
+      browser.sleep(150);
+      registerpage.setUsername('se');
+      browser.sleep(150);
+      registerpage.setUsername('r');
+      browser.sleep(350);
+      // registerpage.setEmail(registerpage.testEmail);
+      registerpage.setEmail('test');
+      browser.sleep(150);
+      registerpage.setEmail('user');
+      browser.sleep(150);
+      registerpage.setEmail('@test');
+      browser.sleep(150);
+      registerpage.setEmail('ing');
+      browser.sleep(150);
+      registerpage.setEmail('.com');
+      browser.sleep(350);
+      // registerpage.setAddress(registerpage.testAddress);
+      registerpage.setAddress('23 ');
+      browser.sleep(150);
+      registerpage.setAddress('Roger Ct.');
+      browser.sleep(350);
+      // registerpage.setCity(registerpage.testCity);
+      registerpage.setCity('Spring');
+      browser.sleep(150);
+      registerpage.setCity('field');
+      browser.sleep(350);
+      registerpage.setState(registerpage.testState);
+      browser.sleep(350);
+      // registerpage.setZip(registerpage.testZip);
+      registerpage.setZip('7');
+      browser.sleep(150);
+      registerpage.setZip('23');
+      browser.sleep(150);
+      registerpage.setZip('89');
+      browser.sleep(350);
+      registerpage.setPassword(registerpage.testPassword);
+      expect(el.isEnabled()).toBe(false);
+      browser.sleep(350);
+      registerpage.setPasswordConf(registerpage.testPassword);
+      expect(el.isEnabled()).toBe(true);
+      browser.sleep(350);
+    });
+    it('should successfully register new user.', function(){
+      registerpage.registerUser();
+      base.verifyUrl(loginpage.url);
+      browser.sleep(500);
+    });
+    it('should display a success alert after registering.', function(){
+      browser.sleep(500);
+      expect(element(by.css('.alert-success')).isDisplayed()).toBe(true);
+      browser.sleep(500);
+    });
+  });
+})();

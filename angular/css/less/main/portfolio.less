@@ -1,0 +1,127 @@
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+@blue: #0101DF;
+@light-blue: #337AB7;
+@med-blue: #1D6BA9;
+@green: #2EFE2E;
+@light-grey: #EEEEEE;
+@med-grey: #E4E4E4;
+@dark-grey: #333333;
+@purple: #5F04B4;
+@light-red: #FE2E2E;
+@white: #FFFFFF;
+
+#portfolio {
+  background-color: @med-grey !important;
+  padding: 35px 0px 5px;
+}
+
+#portfolio hr {
+  background: @dark-grey;
+  background-image: -webkit-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -moz-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -ms-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -o-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+
+#portfolio h3 {
+  font-size: 20px;
+}
+
+#portfolio li {
+  list-style-type: square;
+}
+
+#portfolio-title {
+  color: @light-blue;
+  font-weight: bold;
+}
+
+#portfolio h4 {
+  color: @light-blue;
+}
+
+.portfolioHR {
+  margin-bottom: 8px;
+  margin-top: 5px;
+}
+
+.portfolio-img {
+  padding-bottom: 10px;
+}
+
+#portfolio ul {
+  padding-start: 10px;
+  -webkit-padding-start: 10px;
+}
+
+#no-bullet li {
+  list-style-type: none;
+}
+
+.tech {
+  color: @light-blue;
+}
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+.blueText {
+  background-color: @light-grey;
+  color: @blue;
+  display: inline-block;
+  font-weight: bold;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.redText {
+  background-color: @white;
+  color: @light-red;
+  display: inline-block;
+  font-weight: bold;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.greenText {
+  color: @green;
+  font-weight: bold;
+}
+
+.totopbutton {
+  background-color: transparent !important;
+  border: none;
+  color: @purple;
+  margin-top: 25px;
+  transition: all .5s ease 0s;
+}
+
+.totopbutton:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transition: all .5s ease 0s;
+  color: @light-red;
+}
+
+.totopbutton:focus, .totopbutton:active:focus {
+  outline: none;
+}
+
+@media (min-width: 768px){
+  #portfolio h4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px){
+  #portfolio h4 {
+    font-size: 18px;
+  }
+}

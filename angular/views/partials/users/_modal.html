@@ -1,0 +1,16 @@
+<div class="template-wrapper">
+  <div class="modal-header">
+    <h3 data-ng-bind="modalOptions.headerText"></h3>
+  </div>
+  <div class="modal-body bg-danger">
+    <strong><span data-ng-bind="modalOptions.bodyText"></span></strong>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn delete-cancel" data-ng-click="modalOptions.close()">
+      <span data-ng-bind="modalOptions.closeButtonText"></span>
+    </button>
+    <button type="button" class="btn btn-danger delete-confirm" data-ng-click="modalOptions.ok()">
+      <span data-ng-bind="modalOptions.actionButtonText"></span>
+    </button>
+  </div>
+</div>

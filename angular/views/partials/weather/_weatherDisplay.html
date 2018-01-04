@@ -1,0 +1,69 @@
+<div class="content">
+  <div id="weather">
+    <div class="row">
+      <div class="spinner col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3
+        col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <img class="center-block" data-ng-if="weatherLoading || forecastLoading"
+          src="/img/shared/spinner.gif" />
+      </div>
+      <div class="spinner col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a id="weather-btn" class="pull-right" href="{{wundergroundLink}}" target="_blank">
+          <img id="wundergroundPic" data-ng-src="{{wunderground}}">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-span-12 text-center">
+        <h3 id="today" data-ng-bind="weather.date | date:'EEEE MMMM d, yyyy'"></h3>
+        <h4 class="weather-location" data-ng-bind="weather.location"></h4>
+        <data-ng-include src="'partials/weather/_weatherLocation.html'">
+        </data-ng-include>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1
+        col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+        <img id="weatherIcon" data-ng-src="{{weather.icon}}">
+        <div data-ng-if="weather.temp">
+          <span class="weather-temp-txt" data-ng-bind="weather.temp"></span>
+          <span class="fahrenheit-symbol three-quarter-txt">&#8457</span>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div id="forecast">
+    <ul class="row list-unstyled hidden-sm hidden-md hidden-lg">
+      <li class="col-xs-3 text-center"
+        data-ng-repeat="day in forecast">
+        <img class="forecastIcon" data-ng-src="{{day.icon_url}}">
+        <div>
+          <span class="weather-txt" data-ng-bind="day.low.fahrenheit"></span>
+          <span class="slash xs-quarter-txt">/</span>
+          <span class="weather-txt" data-ng-bind="day.high.fahrenheit"></span>
+        </div>
+        <div>
+          <span class="day weather-txt" data-ng-if="$index === 0">Today</span>
+          <span class="day weather-txt" data-ng-if="$index !== 0"
+            data-ng-bind="day.date.weekday"></span>
+        </div>
+      </li>
+    </ul>
+    <ul class="row list-unstyled hidden-xs">
+      <li class="col-sm-3 col-md-3 col-lg-3 text-center"
+        data-ng-repeat="day in forecast">
+        <img class="forecastIcon" data-ng-src="{{day.icon_url}}">
+        <div>
+          <span class="weather-temp-txt" data-ng-bind="day.low.fahrenheit"></span>
+          <span class="slash weather-txt quarter-txt">/</span>
+          <span class="weather-temp-txt" data-ng-bind="day.high.fahrenheit"></span>
+        </div>
+        <div>
+          <span class="day weather-txt" data-ng-if="$index === 0">Today</span>
+          <span class="day weather-txt" data-ng-if="$index !== 0"
+            data-ng-bind="day.date.weekday"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

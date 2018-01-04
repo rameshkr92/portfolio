@@ -1,0 +1,66 @@
+#favorites {
+  background-color: #eeeeee !important;
+  height: 100vh;
+  margin-top: 75px;
+}
+#favorites hr {
+  background: #333333;
+  background-image: -webkit-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -moz-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -ms-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -o-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+#favorite-title {
+  color: #337ab7;
+  font-size: 18px;
+  font-weight: bold;
+}
+#chart-display {
+  height: 300px;
+  margin: -10px auto;
+  min-width: 300px;
+  max-width: 600px;
+}
+.highchart-row {
+  margin-top: -20px;
+}
+.high-charts-container {
+  margin-top: -10px;
+}
+svg {
+  margin-top: -10px;
+}
+.favorite-form {
+  display: inline-block;
+}
+.btn {
+  margin: 15px 8px;
+  padding: 20px 20px;
+}
+#js-btn-img {
+  background: url(/img/favLang/javascript.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+#js-btn:hover {
+  background-color: #f9de5b;
+}
+#rb-btn-img {
+  background: url(/img/favLang/ruby.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+#rb-btn:hover {
+  background-color: #fda49e;
+}
+#php-btn-img {
+  background: url(/img/favLang/php.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+#php-btn:hover {
+  background-color: #95d7f6;
+}

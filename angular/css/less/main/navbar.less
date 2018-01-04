@@ -1,0 +1,128 @@
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+@light-blue: #337AB7;
+@nav-grey: #FAFAFA;
+@light-red: #FE2E2E;
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.container-fluid > .navbar-header {
+  margin-left: 60px;
+}
+
+.navbar {
+  background-color: @nav-grey;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  margin: 10px 0px 10px 15px;
+}
+
+.icon-bar-back-color {
+  background-color: @light-blue;
+}
+
+.nav > li > a {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.site-nav a, .site-nav button {
+  background-color: transparent !important;
+  font-size: 14px;
+  min-width: 100px;
+  outline: 0px;
+}
+
+.site-nav a:hover, .site-nav a:focus {
+  color: @light-red;
+}
+
+.site-nav button:hover, .site-nav button:focus, .site-nav button:active:focus {
+  color: @light-red;
+  outline: none;
+}
+
+.site-nav a .fa, .site-nav button .fa {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 21px;
+}
+
+.site-nav button {
+  border: none;
+  color: @light-blue;
+  display: block;
+  line-height: 20px;
+  margin: 0px auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  width: 90px;
+}
+
+.my-photo {
+  cursor: pointer;
+  cursor: hand;
+  max-height: 54px;
+  max-width: 54px;
+}
+
+.my-photo-hover {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.hover-text {
+  font-size: smaller;
+}
+
+@media (max-width: 852px) {
+  .site-nav a, .site-nav button {
+    font-size: 18px;
+  }
+  .site-nav a .fa, .site-nav button .fa {
+    display: none;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display:block !important;
+  }
+}

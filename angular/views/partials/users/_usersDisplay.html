@@ -1,0 +1,71 @@
+<div class="template-wrapper">
+<!-- Have to have one `root` element when using templateUrl w/replace `true` -->
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3 id="page-title" class="display-ilb">
+        <img class="title-img" data-ng-src="/img/users/users.png">
+        <span data-ng-bind="title"></span>
+      </h3>
+      <input class="pull-right search-box" type='search'
+        data-ng-model="filter_name" placeholder="Search" />
+    </div>
+  </div>
+  <div class="row">
+    <div id="card-container">
+      <div class="col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1
+        col-md-6 col-md-offset-0 col-lg-6 col-md-offset-0"
+        data-ng-repeat="user in users | filter: filter_name | orderBy: 'last_name'">
+        <div class="user-card">
+          <div class="card-header">
+            <button class="btn close card-close" title="Delete User"
+              data-ng-click="deleteUser(user._id)">&times;</button>
+            <button class="btn btn-link text-btn-color show" type="button"
+              data-ng-click="showUser(user._id)">
+              <span data-ng-bind="user.first_name + ' ' + user.last_name"></span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="clearfix">
+              <div class="pull-left card-body-left">
+                <!-- TODO: make image placeholder for uploaded -->
+                <img class="card-image"
+                  data-ng-src="/img/users/user.png"
+                  data-ng-click="showUser(user._id)" />
+              </div>
+              <div class="pull-left card-body-right">
+                <div class="card-content">
+                  <p>Username: <strong data-ng-bind="user.user_name"></strong></p>
+                  <p><span data-ng-bind="user.city + ', ' + user.state.name"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" data-ng-show="filteredUsers.length === 0">
+    <div class="col-span-12">
+      <h4>No customers found</h4>
+    </div>
+  </div>
+  <div class="row" data-ng-show="users.length > 0">
+    <div class="col-span-12">
+      <!-- Angular ui-bootstrap pagination -->
+      <div class="pagination-sm"
+        data-pagination
+        data-boundary-links="true"
+        data-items-per-page="pageSize"
+        data-max-size="maxSize"
+        data-total-items="totalUsers"
+        data-num-pages="numPages"
+        data-ng-model="currentPage"
+        data-ng-change="pageChanged()">
+      </div>
+      <!-- <h5>Showing -->
+      <h5>
+        <!-- <span class="filteredUsers" data&#45;ng&#45;bind="filteredUsers"></span> of -->
+        <span data-ng-bind="totalUsers"></span> total users.</h5>
+    </div>
+  </div>
+</div>

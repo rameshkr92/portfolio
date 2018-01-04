@@ -1,0 +1,91 @@
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+@dark-grey: #333333;
+@js-yellow: #F9DE5B;
+@light-grey: #EEEEEE;
+@light-blue: #337AB7;
+@med-blue: #1D6BA9;
+@php-blue: #95D7F6;
+@rb-red: #FDA49E;
+
+#favorites {
+  background-color: @light-grey !important;
+  height: 100vh;
+  margin-top: 75px;
+}
+
+#favorites hr {
+  background: @dark-grey;
+  background-image: -webkit-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -moz-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -ms-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  background-image: -o-linear-gradient(left, @light-grey, @med-blue, @light-grey);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+
+#favorite-title {
+  color: @light-blue;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#chart-display{
+  height: 300px;
+  margin: -10px auto;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.highchart-row {
+  margin-top: -20px;
+}
+
+.high-charts-container {
+  margin-top: -10px;
+}
+
+svg {
+  margin-top: -10px;
+}
+
+.favorite-form {
+  display: inline-block;
+}
+
+.btn {
+  margin: 15px 8px;
+  padding: 20px 20px;
+}
+
+#js-btn-img {
+  background: url(/img/favLang/javascript.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+
+#js-btn:hover {
+  background-color: @js-yellow;
+}
+
+#rb-btn-img {
+  background: url(/img/favLang/ruby.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+
+#rb-btn:hover {
+  background-color: @rb-red;
+}
+
+#php-btn-img {
+  background: url(/img/favLang/php.png) no-repeat;
+  background-size: 48px 48px;
+  padding: 13px 15px 25px 35px;
+}
+
+#php-btn:hover {
+  background-color: @php-blue;
+}

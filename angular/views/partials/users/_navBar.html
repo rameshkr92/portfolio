@@ -1,0 +1,61 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar-collapse"
+          aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <span data-ng-bind="app_title"></span>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav nav-pills navbar-padding" role="navigation">
+            <li class="users_link">
+              <a class="users-btn active" href="#/users">Users</a>
+            </li>
+            <li class="about_link">
+              <a class="about-btn active" href="" data-ng-click="showAbout()">About</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-padding">
+          <li class="dropdown" data-ng-if="loggedIn">
+            <button type="button" class="nav-btn-toggle dropdown-toggle" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span data-ng-bind="full_name"></span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="current-user">
+                <a class="user-profile" href="#/users/{{id}}" data-ng-click="showUser(id)">
+                  <strong class="username blk" data-ng-bind="full_name"></strong>
+                  <small class="blk small-txt">View Profile</small>
+                </a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li class="current-user">
+                <a class="user-password" href="#/users/password">Change Password</a>
+              </li>
+              <li class="current-user">
+                <a class="user-logout" href="#/users/login">Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="login" data-ng-if="!loggedIn">
+            <a class="user-login login-btn" href="#/users/login">Login</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </div>
+</nav>

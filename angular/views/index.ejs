@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="AppPortfolio">
+<head>
+  <!--<base href="/">-->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="title" content="Ramesh Kumar Full Stack Web Developer" />
+  <meta name="description" content="Ramesh Kumar is a full stack web developer concentrating on the MEAN Stack, MongoDB Express AngularJS and NodeJS" />
+  <meta name="site_name" content="Ramesh Kumar" />
+  <link rel="icon" type="image/png" href="/img/favicon/favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
+  <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+  <link type="text/css" rel="stylesheet" href="/css/animate/animate.css" />
+  <link type="text/css" rel="stylesheet" href="/css/animate/animation.css" />
+  <link type="text/css" rel="stylesheet" href="/css/favLang/favLang.css" />
+  <link type="text/css" rel="stylesheet" href="/css/main/navbar.css" />
+  <link type="text/css" rel="stylesheet" href="/css/main/header.css" />
+  <link type="text/css" rel="stylesheet" href="/css/main/portfolio.css" />
+  <link type="text/css" rel="stylesheet" href="/css/main/skills.css" />
+  <link type="text/css" rel="stylesheet" href="/css/main/footer.css" />
+  <link type="text/css" rel="stylesheet" href="/css/testing/testing.css" />
+  <link type="text/css" rel="stylesheet" href="/css/weather/weather.css" />
+  <title><%= title %></title>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-scroll/angular-scroll.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-touch/angular-touch.min.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/directives/animate/animate.js"></script>
+<script type="text/javascript" src="/js/directives/favLang/favLang.js"></script>
+<script type="text/javascript" src="/js/directives/main/main.js"></script>
+<script type="text/javascript" src="/js/directives/main/navbar.js"></script>
+<script type="text/javascript" src="/js/directives/shared/autoFocus.js"></script>
+<script type="text/javascript" src="/js/directives/shared/compare.js"></script>
+<script type="text/javascript" src="/js/directives/testing/test.js"></script>
+<script type="text/javascript" src="/js/directives/weather/weather.js"></script>
+<script type="text/javascript" src="/js/providers/animation.js"></script>
+<script type="text/javascript" src="/js/providers/authFactory.js"></script>
+<script type="text/javascript" src="/js/providers/detectDevice.js"></script>
+<script type="text/javascript" src="/js/providers/flashFactory.js"></script>
+<script type="text/javascript" src="/js/providers/modalService.js"></script>
+<script type="text/javascript" src="/js/providers/portfoliosService.js"></script>
+<script type="text/javascript" src="/js/providers/skillsService.js"></script>
+<script type="text/javascript" src="/js/providers/socketFactory.js"></script>
+<script type="text/javascript" src="/js/providers/weatherFactory.js"></script>
+<script type="text/javascript" src='/js/scripts/Highcharts-4.1.7/js/highcharts.js'></script>
+<script type="text/javascript" src="/js/scripts/mainJs.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Load navbar display directive -->
+    <nav-bar-display></nav-bar-display>
+  </div>
+  <!-- ngView div -->
+  <div class="row">
+    <div class="container-fluid">
+      <div class="view-container">
+        <!-- autoscroll to have favorite language page loaded scrolled to top after -->
+        <!-- page navigating away and back -->
+        <div data-ng-view class="view-frame" data-autoscroll="true"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

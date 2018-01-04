@@ -1,0 +1,11 @@
+.idea
+.credentials.js
+.DS_Store
+!.gitkeep
+bower_components/
+credentials/
+logs/*
+node_modules/
+tmp
+npm-debug.log
+/*.env

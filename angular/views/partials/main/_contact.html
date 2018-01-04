@@ -1,0 +1,61 @@
+<style type="text/css">
+  .list-unstyled-icons li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+  }
+</style>
+<div class="modal-wrapper" data-ng-controller="PortfolioNavBarController">
+  <div class="modal-header">
+    <h3 class="display-ilb">
+      <a href="{{linkedin_url}}" target="_blank">
+        <img id="logo" data-ng-src="{{pc_logo}}">
+        <span data-ng-bind="app_title"></span>
+      </a>
+    </h3>
+    <div class="pull-right">
+      <img class="my-photo" data-ng-src="{{my_photo}}"
+           data-popover-placement="bottom"
+           data-popover-template="myPhoto"
+           data-popover-trigger="mouseenter">
+      <p class="hover-text" data-ng-bind="hover_msg"></p>
+    </div>
+  </div>
+  <script id="myPhoto.html" type="text/ng-template">
+    <img class="my-photo-hover" data-ng-src="{{my_photo}}">
+  </script>
+  <div id="welcome" class="modal-body about-modal-body">
+    <h4 class="text-center" data-ng-bind="contact_heading"></h4>
+    <div class="contact-box bg-secondary dark animated flipInY visible" data-animation="flipInY">
+      <!-- Contact List -->
+      <ul class="list-unstyled list-unstyled-icons">
+        <!--<li><i class="inline-icon icon-before-and-after text-primary fa fa-map-marker"></i>1111-A Nowhere Lane,<br>Outta Sight,<br>State 90378, USA</li>-->
+        <li><i class="inline-icon icon-before-and-after text-primary fa fa-comment"></i><a href="mailto:rameshkmr731@gmail.com"> rameshkmr731@gmail.com</a></li>
+        <li><i class="inline-icon icon-before-and-after text-primary fa fa-phone"></i><a href="tel:9762137636"> +91-9762137636</a></li>
+      </ul>
+      <!--<a href="#" class="btn btn-primary" data-target="messenger"><span>Use Contact Form</span><i class="ti-email"></i></a>-->
+      <!--<h5 class="margin-t-60">Check my social media!</h5>-->
+      <!--<ul class="list-inline">-->
+        <!--<li><a href="#" class="icon icon-circle icon-xs icon-facebook"><i class="fa fa-facebook"></i></a></li>-->
+        <!--<li><a href="#" class="icon icon-circle icon-xs icon-twitter"><i class="fa fa-twitter"></i></a></li>-->
+        <!--<li><a href="#" class="icon icon-circle icon-xs icon-google-plus"><i class="fa fa-twitter"></i></a></li>-->
+      <!--</ul>-->
+      <!--<h5>Like me on Facebook</h5>-->
+      <!--&lt;!&ndash; FB Like &ndash;&gt;-->
+      <!--<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/dev.rameshkr" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=300&amp;href=https://www.facebook.com/dev.rameshkr&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 72px; height: 20px;"><iframe name="fef51e9cc0dd8c" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 72px; height: 20px;" src="https://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlY4eZXm_YWu.js%3Fversion%3D42%23cb%3Df1c6dc591d4ff5%26domain%3Dthemes.suelo.pl%26origin%3Dhttp%253A%252F%252Fthemes.suelo.pl%252Ff1f579f38ba1db%26relation%3Dparent.parent&amp;container_width=300&amp;href=http%3A%2F%2Fwww.facebook.com%2Fsuelopl&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>-->
+    </div>
+  </div>
+  <div class="modal-footer">
+    <!-- <a id="github-btn" class="nbatag pull-left" href="{{github_url}}"
+      target="_blank">
+      <i class="fa fa-2x fa-{{github_fa}}"></i>
+    </a> -->
+    <a id="linkedin-btn" class="nbatag pull-left" href="{{linkedin_url}}"
+       target="_blank">
+      <i class="fa fa-2x fa-{{linkedin_fa}}"></i>
+    </a>
+    <button id="close-btn" class="btn btn-primary about-modal-ok" type="button"
+            data-ng-click="modalOptions.ok()">
+      <span data-ng-bind="modalOptions.actionButtonText"></span>
+    </button>
+  </div>
+</div>

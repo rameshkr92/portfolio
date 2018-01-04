@@ -1,0 +1,148 @@
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100% !important;
+}
+.weather {
+  margin-top: 80px;
+  margin-right: 25px;
+  height: 50px;
+}
+#weatherDisplay {
+  display: inline-block;
+}
+#wundergroundPic {
+  height: 28px;
+  margin-bottom: 5px;
+  margin-right: 60px;
+  width: 120px;
+}
+#wunderDropDown {
+  margin-left: 10px;
+  display: inline-block;
+}
+/* To increase size of clickable area */
+#weatherToggle {
+  display: block;
+  margin: -5px;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+.glyphicon.glyphicon-search {
+  color: white;
+  background-color: #337ab7;
+  padding: 5px;
+}
+#weatherLocation {
+  display: block;
+}
+#getLoc {
+  color: #000000;
+  width: 240px;
+}
+header {
+  /* background: url(/img/main/dev-desk-bw.jpeg) center fixed no-repeat; */
+  /*background: url(/img/main/appleLaptopAngle.jpg) center fixed no-repeat;*/
+  background: url(/img/main/main-bg.jpg) center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+  height: 100vh;
+  min-height: 600px;
+}
+.header-text-margin {
+  margin-top: 25%;
+}
+#header-text {
+  color: #cb3737;
+  font-weight: bold;
+}
+.blue-text {
+  color: #1d6ba9;
+}
+.red-text {
+  color: #cb3737;
+}
+.orange-text {
+  color: #f49543;
+}
+.bg-blur {
+  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.6);
+}
+.marg-pad-top-10 {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+#header-content hr {
+  background-image: -webkit-linear-gradient(left, #d2fff5, #000000, #d2fff5);
+  background-image: -moz-linear-gradient(left, #d2fff5, #000000, #d2fff5);
+  background-image: -ms-linear-gradient(left, #d2fff5, #000000, #d2fff5);
+  background-image: -o-linear-gradient(left, #d2fff5, #000000, #d2fff5);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+.content-img {
+  height: 80px;
+  width: 80px;
+}
+h4 {
+  font-size: 12px;
+}
+.display-ilb {
+  display: inline-block;
+}
+#logo {
+  height: 25px;
+  width: 25px;
+  vertical-align: top;
+}
+#welcome h4 {
+  color: #337ab7;
+  font-weight: bold;
+}
+.modal-footer .nbatag {
+  padding: 2px 5px 0px 5px;
+}
+.modal-footer a:hover {
+  color: #fe2e2e;
+}
+/*#close-btn {*/
+  /*background-color: #2efe2e;*/
+  /*color: #000000;*/
+  /*font-weight: bold;*/
+  /*margin: 0px 10px 0px 0px;*/
+  /*padding: 8px 20px;*/
+/*}*/
+#close-btn {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  margin: 0px 10px 0px 0px;
+  padding: 8px 20px;
+}
+@media (min-width: 768px) {
+  .content-img {
+    height: 112px;
+    width: 112px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+/* Remove padding/margin for small screens */
+@media (max-width: 992px) {
+  .header-text-margin {
+    margin-left: 0px;
+  }
+}

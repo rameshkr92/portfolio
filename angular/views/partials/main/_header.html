@@ -1,0 +1,37 @@
+<div id="header-content">
+  <data-ng-include src="'partials/main/_weather.html'"></data-ng-include>
+  <div class="row">
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0
+      col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+      <div class="header-text-margin">
+        <hr>
+        <h3 id="header-text" class="text-center">
+          <span id="head-txt0" class="head-txt" data-ng-bind="header_title0"></span>
+        </h3>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-0 col-sm-2 col-sm-offset-3
+      col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3
+      marg-pad-top-10 bg-blur">
+      <img id="mean-img" class="content-img center-block" data-ng-src="{{mean_img}}">
+      <h4 id="mean-img-txt" class="mean margin-left-5 blue-text text-center"
+        data-ng-bind="mean_stack"></h4>
+    </div>
+    <div class="col-xs-4 col-xs-offset-0 col-sm-2 col-sm-offset-0
+      col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0
+      marg-pad-top-10 bg-blur">
+      <img id="ror-img" class="content-img center-block" data-ng-src="{{ror_img}}">
+      <h4 id="ror-img-txt" class="ror red-text text-center" data-ng-bind="ror_stack"></h4>
+    </div>
+    <div class="col-xs-4 col-xs-offset-0 col-sm-2 col-sm-offset-0
+      col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0
+      marg-pad-top-10 bg-blur">
+      <img id="lamp-img" class="content-img center-block" data-ng-src="{{lamp_img}}">
+      <h4 id="lamp-img-txt" class="lamp margin-left-5 orange-text text-center"
+        data-ng-bind="lamp_stack"></h4>
+    </div>
+  </div>
+</div>

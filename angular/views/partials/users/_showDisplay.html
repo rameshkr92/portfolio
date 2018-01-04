@@ -1,0 +1,39 @@
+<div class="template-wrapper">
+<!-- Have to have one `root` element when using templateUrl w/replace `true` -->
+  <div id="card-container">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8
+      col-md-offset-2">
+      <div class="user-card">
+        <div class="card-header">
+          <button class="btn close card-close" title="Delete User" data-ng-click="deleteUser(showUser._id)">&times;</button>
+          <button type="button" class="btn btn-link text-btn-color edit" data-ng-click="editUser(showUser)">
+            <span data-ng-bind="showUser.first_name + ' ' + showUser.last_name"></span>
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="clearfix">
+            <div class="pull-left card-body-left">
+              <img class="card-image" data-ng-src="/img/users/user.png" data-ng-click="editUser(showUser)" />
+            </div>
+            <div class="pull-left card-body-right">
+              <div class="card-content">
+                <address>
+                  <strong class="username">Username</strong><br />
+                  <span data-ng-bind="showUser.user_name"></span><br />
+                </address>
+                <address>
+                  <strong class="email">Email</strong><br />
+                  <span data-ng-bind="showUser.email"></span>
+                </address>
+                <address>
+                  <strong class="address">Address</strong><br />
+                  <span data-ng-bind="showUser.city + ', ' + showUser.state.name + ' ' + showUser.zip"></span>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

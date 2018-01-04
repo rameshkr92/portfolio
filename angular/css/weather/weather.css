@@ -1,0 +1,48 @@
+#weather-page {
+  background-color: #8795a4;
+  height: 100vh;
+  width: 100% !important;
+}
+.spinner {
+  margin-top: 100px;
+}
+#wundergroundPic {
+  margin-bottom: 24px;
+}
+#weather hr {
+  background: #333333;
+  background-image: -webkit-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -moz-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -ms-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  background-image: -o-linear-gradient(left, #eeeeee, #1d6ba9, #eeeeee);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+#weather h3,
+#weather h4 {
+  color: #f9de5b;
+  font-weight: bold;
+}
+.weather-location {
+  display: inline-block;
+}
+#weather h4 {
+  margin-bottom: 15px;
+}
+.weather-temp-txt {
+  font-size: 3.0em;
+}
+.three-quarter-txt {
+  vertical-align: 75%;
+}
+.quarter-txt {
+  vertical-align: 25%;
+}
+.xs-quarter-txt {
+  font-size: 0.80em;
+  vertical-align: 25%;
+}
+.weather-txt {
+  font-size: 1.5em;
+}

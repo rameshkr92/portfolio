@@ -1,0 +1,90 @@
+<nav class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button"
+        id="nbtoggle"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar-collapse"
+        aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar icon-bar-back-color"></span>
+          <span class="icon-bar icon-bar-back-color"></span>
+          <span class="icon-bar icon-bar-back-color"></span>
+      </button>
+      <a class="navbar-brand" href="{{linkedin_url}}" target="_blank">
+        <span data-ng-bind="app_title"></span>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- FontAwesome icons only seen when not collapsed -->
+    <div class="collapse navbar-collapse site-nav" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right" role="navigation">
+        <li data-ng-if="currentPath !== '/'">
+          <a id="home-btn" class="nbatag text-center" href="{{home_url}}">
+            <i class="fa fa-2x fa-{{home_fa}} text-center"></i>
+            <span data-ng-bind="home"></span>
+          </a>
+        </li>
+        <li data-ng-if="currentPath === '/testing'">
+          <a id="unit-btn" class="nbatag text-center"
+            data-ng-click="scrollTo('unit')">
+            <i class="fa fa-2x fa-{{unit_fa}} text-center"></i>
+            <span data-ng-bind="unit"></span>
+          </a>
+        </li>
+        <li data-ng-if="currentPath === '/testing'">
+          <a id="e2e-btn" class="nbatag text-center"
+            data-ng-click="scrollTo('e2e')">
+            <i class="fa fa-2x fa-{{e2e_fa}} text-center"></i>
+            <span data-ng-bind="e2e"></span>
+          </a>
+        </li>
+        <li data-ng-if="currentPath === '/'">
+          <a id="portfolio-btn" class="nbatag text-center"
+            data-ng-click="scrollTo('portfolio')">
+            <i class="fa fa-2x fa-{{portfolio_fa}} text-center"></i>
+            <span data-ng-bind="portfolio"></span>
+          </a>
+        </li>
+        <li data-ng-if="currentPath === '/'">
+          <a id="skills-btn" class="nbatag text-center"
+            data-ng-click="scrollTo('skills')">
+            <i class="fa fa-2x fa-{{skills_fa}} text-center"></i>
+            <span data-ng-bind="skills"></span>
+          </a>
+        </li>
+        <li>
+          <a id="about-btn" class="nbatag text-center"
+            data-ng-click="showAbout()">
+            <i class="fa fa-2x fa-{{about_fa}} text-center"></i>
+            <span data-ng-bind="about"></span>
+          </a>
+        </li>
+        <li>
+          <a id="linkedin-btn" class="nbatag text-center" href="{{linkedin_url}}"
+            target="_blank">
+            <i class="fa fa-2x fa-{{linkedin_fa}} text-center"></i>
+            <span data-ng-bind="linkedin"></span>
+          </a>
+        </li>
+        <li>
+          <a id="contact-btn" class="nbatag text-center"
+             data-ng-click="showContact()">
+            <i class="fa fa-2x fa-{{contact_fa}} text-center"></i>
+            <span data-ng-bind="contact"></span>
+          </a>
+        </li>
+        <!--<li>-->
+          <!--<a id="github-btn" class="nbatag text-center" href="{{github_url}}"-->
+            <!--target="_blank">-->
+            <!--<i class="fa fa-2x fa-{{github_fa}} text-center"></i>-->
+            <!--<span data-ng-bind="github"></span>-->
+          <!--</a>-->
+        <!--</li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

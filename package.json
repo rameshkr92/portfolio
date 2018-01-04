@@ -1,0 +1,68 @@
+{
+  "name": "pc_app",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "author": "Ramesh Kumar <rameshkr92@yahoo.in>",
+  "private": true,
+  "main": "server.js",
+  "engines": {
+    "node": "^0.12.x"
+  },
+  "keywords": [
+    "mongo",
+    "express",
+    "angular",
+    "node"
+  ],
+  "dependencies": {
+    "bcrypt": "^0.8.x",
+    "body-parser": "^1.13.x",
+    "bower": "^1.5.x",
+    "cookie-parser": "^1.3.x",
+    "debug": "^2.2.x",
+    "ejs": "^2.3.x",
+    "express": "latest",
+    "jsonwebtoken": "^5.0.x",
+    "mongoose": "latest",
+    "mongoose-unique-validator": "^0.4.x",
+    "morgan": "^1.6.x",
+    "serve-favicon": "^2.3.x",
+    "socket.io": "^1.3.x",
+    "underscore": "^1.8.x"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.x",
+    "grunt-cli": "^0.1.x",
+    "grunt-contrib-less": "^1.0.x",
+    "grunt-contrib-watch": "^0.6.x",
+    "grunt-karma": "^0.12.x",
+    "jasmine-core": "^2.3.x",
+    "jasmine-spec-reporter": "^2.2.x",
+    "karma": "^0.13.x",
+    "karma-chrome-launcher": "^0.2.x",
+    "karma-firefox-launcher": "^0.1.x",
+    "karma-jasmine": "^0.3.x",
+    "karma-jasmine-html-reporter": "^0.1.x",
+    "karma-ng-html2js-preprocessor": "^0.1.x",
+    "karma-opera-launcher": "^0.3.x",
+    "karma-script-launcher": "^0.1.x",
+    "nodemon": "^1.11.0",
+    "protractor": "^2.2.x",
+    "shelljs": "^0.5.x",
+    "tmp": "0.0.27"
+  },
+  "scripts": {
+    "grunt": "grunt karma:unit:start watch",
+    "postinstall": "bower install",
+    "preprotractor": "npm run update-webdriver",
+    "prestart": "npm install",
+    "pretest": "npm install",
+    "preupdate-webdriver": "npm install",
+    "protractor": "protractor test/protractor-conf.js",
+    "start": "node ./server.js",
+    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run",
+    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\"",
+    "update-webdriver": "webdriver-manager update"
+  }
+}

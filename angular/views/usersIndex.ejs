@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="AppPortfolio">
+<!-- <html lang="en" ng&#45;app="widgetApp" ng&#45;strict&#45;di> -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="title" content="Ramesh Kumar Full Stack Web Developer" />
+  <meta name="description" content="Ramesh Kumar is a full stack web developer concentrating on the MEAN Stack, MongoDB Express AngularJS and NodeJS" />
+  <meta name="site_name" content="Ramesh Kumar" />
+  <link rel="icon" type="image/png" href="/img/favicon/favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
+  <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="/css/users/usersApp.css" />
+  <link type="text/css" rel="stylesheet" href="/css/animate/animation.css" />
+  <title><%= title %></title>
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-scroll/angular-scroll.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-touch/angular-touch.min.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/directives/main/main.js"></script>
+<script type="text/javascript" src="/js/directives/shared/compare.js"></script>
+<script type="text/javascript" src="/js/directives/users/edit.js"></script>
+<script type="text/javascript" src="/js/directives/users/login.js"></script>
+<script type="text/javascript" src="/js/directives/users/navbar.js"></script>
+<script type="text/javascript" src="/js/directives/users/password.js"></script>
+<script type="text/javascript" src="/js/directives/users/registration.js"></script>
+<script type="text/javascript" src="/js/directives/users/show.js"></script>
+<script type="text/javascript" src="/js/directives/users/unique.js"></script>
+<script type="text/javascript" src="/js/directives/users/users.js"></script>
+<script type="text/javascript" src="/js/providers/authFactory.js"></script>
+<script type="text/javascript" src="/js/providers/flashFactory.js"></script>
+<script type="text/javascript" src="/js/providers/modalService.js"></script>
+<script type="text/javascript" src="/js/providers/usersFactory.js"></script>
+</head>
+<body>
+  <div id="navbar-container" class="container">
+    <!-- Load navbar display directive -->
+    <users-nav-bar-display></users-nav-bar-display>
+  </div>
+
+  <div class="container">
+    <!-- Flash message div -->
+    <div class="row">
+      <div class="
+        col-xs-6 col-xs-offset-3
+        col-sm-6 col-sm-offset-3
+        col-md-6 col-md-offset-3">
+        <div id='flash-messages' class="text-center"
+          data-ng-class="{'alert': flash,
+          'alert-success': flash.type === 'success',
+          'alert-danger': flash.type === 'error'}"
+          data-ng-if="flash" data-ng-bind="flash.message">
+        </div>
+      </div>
+    </div>
+    <!-- ngView div -->
+    <div class="row">
+      <div class="container-fluid">
+        <div class="view-container">
+          <div data-ng-view class="view-frame"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

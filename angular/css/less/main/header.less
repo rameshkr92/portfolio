@@ -1,0 +1,182 @@
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+@black: #000000;
+@light-blue: #337AB7;
+@med-blue: #1D6BA9;
+@green: #2EFE2E;
+@orange: #F49543;
+@light-red: #FE2E2E;
+@med-red: #CB3737;
+@light-teal: #D2FFF5;
+@white: #FFFFFF;
+@whitea: rgba(255,255,255,0.6);
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100% !important;
+}
+
+.weather {
+  margin-top: 80px;
+  margin-right: 25px;
+  height: 50px;
+}
+
+#weatherDisplay {
+  display: inline-block;
+}
+
+#wundergroundPic {
+  height: 28px;
+  margin-bottom: 5px;
+  margin-right: 60px;
+  width: 120px;
+}
+
+#wunderDropDown {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* To increase size of clickable area */
+#weatherToggle {
+  display: block;
+  margin: -5px;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.glyphicon.glyphicon-search {
+  color: white;
+  background-color: @light-blue;
+  padding: 5px;
+}
+
+#weatherLocation {
+  display: block;
+}
+
+#getLoc {
+  color: @black;
+  width: 240px;
+}
+
+header {
+  /* background: url(/img/main/dev-desk-bw.jpeg) center fixed no-repeat; */
+  background: url(/img/main/appleLaptopAngle.jpg) center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: @white;
+  height: 100vh;
+  min-height: 600px;
+}
+
+.header-text-margin {
+  margin-top: 25%;
+}
+
+#header-text {
+  color: @med-red;
+  font-weight: bold;
+}
+
+.blue-text {
+  color: @med-blue;
+}
+
+.red-text {
+  color: @med-red;
+}
+
+.orange-text {
+  color: @orange;
+}
+
+.bg-blur {
+  background-color: @white;
+  background: @whitea;
+}
+
+.marg-pad-top-10 {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#header-content hr {
+  background-image: -webkit-linear-gradient(left, @light-teal, @black, @light-teal);
+  background-image: -moz-linear-gradient(left, @light-teal, @black, @light-teal);
+  background-image: -ms-linear-gradient(left, @light-teal, @black, @light-teal);
+  background-image: -o-linear-gradient(left, @light-teal, @black, @light-teal);
+  border: 0px;
+  height: 1px;
+  width: 45%;
+}
+
+.content-img {
+  height: 80px;
+  width: 80px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.display-ilb {
+  display: inline-block;
+}
+
+#logo {
+  height: 25px;
+  width: 25px;
+  vertical-align: top;
+}
+
+#welcome h4 {
+  color: @light-blue;
+  font-weight: bold;
+}
+
+.modal-footer .nbatag {
+  padding: 2px 5px 0px 5px;
+}
+
+.modal-footer a:hover {
+  color: @light-red;
+}
+
+#close-btn {
+  background-color: @green;
+  color: @black;
+  font-weight: bold;
+  margin: 0px 10px 0px 0px;
+  padding: 8px 20px;
+}
+
+@media (min-width: @sm){
+  .content-img {
+    height: 112px;
+    width: 112px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @md){
+  h4 {
+    font-size: 18px;
+  }
+}
+
+/* Remove padding/margin for small screens */
+@media (max-width: @md) {
+  .header-text-margin {
+    margin-left: 0px;
+  }
+}

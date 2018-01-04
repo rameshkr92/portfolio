@@ -1,0 +1,55 @@
+<div class="modal-wrapper" data-ng-controller="PortfolioNavBarController">
+  <div class="modal-header">
+    <h3 class="display-ilb">
+      <a href="{{linkedin_url}}" target="_blank">
+        <img id="logo" data-ng-src="{{pc_logo}}">
+        <span data-ng-bind="app_title"></span>
+      </a>
+    </h3>
+    <div class="pull-right">
+      <img class="my-photo" data-ng-src="{{my_photo}}"
+        data-popover-placement="bottom"
+        data-popover-template="myPhoto"
+        data-popover-trigger="mouseenter">
+      <p class="hover-text" data-ng-bind="hover_msg"></p>
+    </div>
+  </div>
+  <script id="myPhoto.html" type="text/ng-template">
+    <img class="my-photo-hover" data-ng-src="{{my_photo}}">
+  </script>
+  <div id="welcome" class="modal-body about-modal-body">
+    <h4 class="text-center" data-ng-bind="about_welcome"></h4>
+    <p>
+      <span data-ng-bind="about_p0"></span>
+      <a href="{{codingdojo_url}}" target="_blank">
+        <span data-ng-bind="codingdojo"></span>
+      </a>
+      <span data-ng-bind="about_p1"></span>
+    </p>
+    <p>
+      <span data-ng-bind="about_p2"></span>
+      <!-- <a href="{{github_url}}" target="_blank">
+        <span data-ng-bind="github"></span>
+      </a> -->
+      <span data-ng-bind="about_p3"></span>
+      <a href="{{linkedin_url}}" target="_blank">
+        <span data-ng-bind="linkedin"></span>
+      </a>
+    </p>
+    <p data-ng-bind="about_p4"></p>
+  </div>
+  <div class="modal-footer">
+    <!-- <a id="github-btn" class="nbatag pull-left" href="{{github_url}}"
+      target="_blank">
+      <i class="fa fa-2x fa-{{github_fa}}"></i>
+    </a> -->
+    <a id="linkedin-btn" class="nbatag pull-left" href="{{linkedin_url}}"
+      target="_blank">
+      <i class="fa fa-2x fa-{{linkedin_fa}}"></i>
+    </a>
+    <button id="close-btn" class="btn btn-primary about-modal-ok" type="button"
+      data-ng-click="modalOptions.ok()">
+      <span data-ng-bind="modalOptions.actionButtonText"></span>
+    </button>
+  </div>
+</div>

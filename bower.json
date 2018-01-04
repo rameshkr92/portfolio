@@ -1,0 +1,20 @@
+{
+  "name": "pc_app",
+  "description": "Portfolio",
+  "version": "1.0.0",
+  "license": "open",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.x",
+    "angular-animate": "~1.3.x",
+    "angular-bootstrap": "~0.13.1",
+    "angular-mocks": "~1.3.x",
+    "angular-route": "~1.3.x",
+    "angular-sanitize": "~1.3.x",
+    "angular-scroll": "~0.7.1",
+    "angular-touch": "~1.3.x",
+    "bootstrap": "~3.3.x",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.x"
+  }
+}

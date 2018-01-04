@@ -1,0 +1,17 @@
+<div id="wunderDropDown">
+  <a id="weatherToggle" data-ng-click="toggleWeather()">
+    <span class="glyphicon glyphicon-search center-block"></span>
+  </a>
+</div>
+<div id="weatherLocation">
+  <form>
+    <input id="getLoc" type="text" data-ng-model="selected"
+      placeholder="Find Location" data-autocomplete="off"
+      data-typeahead="cities.name for cities in getLocations($viewValue)"
+      data-typeahead-editable="false"
+      data-typeahead-min-length="3"
+      data-typeahead-on-select="onSelect($item, $model, $label)"
+      data-ng-show="showing"
+      data-auto-focus />
+  </form>
+</div>

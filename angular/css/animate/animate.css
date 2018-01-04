@@ -1,0 +1,28 @@
+#animate hr {
+  margin: 5px 0px;
+}
+.thumb-div {
+  cursor: pointer;
+  cursor: hand;
+  margin-top: 80px;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.car-img {
+  display: inline-block;
+  max-height: 45px;
+  min-width: 45px;
+}
+.photo {
+  max-height: 420px;
+}
+.album-images {
+  overflow: hidden;
+}
+img.photo {
+  display: none;
+}
+img.photo:first-child {
+  display: block;
+}

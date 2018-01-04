@@ -1,0 +1,253 @@
+<div class="template-wrapper">
+  <div id="{{id_name}}" class="row">
+    <div class="jumbotron
+      col-xs-10 col-xs-offset-1
+      col-sm-8 col-sm-offset-2
+      col-md-6 col-md-offset-3">
+      <div class="container">
+
+        <h2 id="title">
+          <span class="glyphicon glyphicon-edit" data-ng-if="!registering"></span>
+          <span class="title" data-ng-bind="form_for"></span>
+        </h2>
+
+        <form id="{{form_name}}" name="{{form_name}}" role="form"
+          data-ng-submit="submit()" novalidate>
+
+          <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text"
+              id="first_name"
+              name="first_name"
+              class="form-control"
+              placeholder="First name"
+              data-ng-model="user.first_name"
+              autofocus />
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text"
+              id="last_name"
+              name="last_name"
+              class="form-control"
+              placeholder="Last name"
+              data-ng-model="user.last_name" />
+          </div>
+
+          <div class="form-group"
+            data-ng-class="{'has-error': {{form_name}}.user_name.$dirty &amp;&amp;
+            {{form_name}}.user_name.$invalid ||
+            {{form_name}}.user_name.$error.unique,
+            'has-success': {{form_name}}.user_name.$dirty &amp;&amp;
+            {{form_name}}.user_name.$valid}">
+
+            <label for="user_name">Username</label>
+            <input type="text"
+              id="user_name"
+              name="user_name"
+              class="form-control"
+              placeholder="Desired username"
+              data-ng-model="user.user_name"
+              data-ng-model-options="{updateOn: 'blur'}"
+              data-ng-minlength=4
+              data-pc-unique
+              data-pc-unique-key="{{user._id}}"
+              data-pc-unique-property="user_name"
+              data-pc-unique-registering="{{registering}}"
+              required />
+
+            <span data-ng-show="{{form_name}}.user_name.$error.minlength"
+              class="help-block bg-danger">
+                User name is required to be at least 4 characters.
+            </span>
+            <span id="usernameTaken"
+              data-ng-show="{{form_name}}.user_name.$touched &amp;&amp;
+              {{form_name}}.user_name.$error.unique" class="help-block
+              bg-danger">
+                That username is taken, please try another.
+            </span>
+          </div>
+
+          <div class="form-group"
+            data-ng-class="{'has-error': {{form_name}}.email.$dirty &amp;&amp;
+            {{form_name}}.email.$invalid ||
+            {{form_name}}.email.$error.unique,
+            'has-success': {{form_name}}.email.$dirty &amp;&amp;
+            {{form_name}}.email.$valid}">
+
+            <label for="email">Email Address</label>
+            <input type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Email address"
+              data-ng-model="user.email"
+              data-ng-model-options="{updateOn: 'blur'}"
+              data-pc-unique
+              data-pc-unique-key="{{user._id}}"
+              data-pc-unique-property="email"
+              data-pc-unique-registering="{{registering}}"
+              required />
+
+            <span data-ng-show="{{form_name}}.email.$error.email"
+              class="help-block bg-danger">
+              Valid email address is required
+            </span>
+            <span id="emailTaken"
+              data-ng-show="{{form_name}}.email.$touched &amp;&amp;
+              {{form_name}}.email.$error.unique" class="help-block bg-danger">
+                Email address has already been registered.
+            </span>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text"
+                  id="address"
+                  name="address"
+                  class="form-control"
+                  data-ng-model="user.address" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text"
+                id="city"
+                name="city"
+                class="form-control"
+                data-ng-model="user.city" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="state">State</label>
+                <select
+                  id="state"
+                  name="state"
+                  class="form-control"
+                  data-ng-model="user.state"
+                  data-ng-options="state.name for state in states">
+                  <option data-ng-bind="user.state.name"></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group"
+              data-ng-class="{'has-error': {{form_name}}.zip.$dirty &amp;&amp;
+              {{form_name}}.zip.$invalid,
+              'has-success': {{form_name}}.zip.$dirty &amp;&amp;
+              {{form_name}}.zip.$valid}">
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="zip">Zip Code</label>
+                  <input type="number"
+                    id="zip"
+                    name="zip"
+                    class="form-control"
+                    data-ng-model="user.zip"
+                    data-ng-model-options="{updateOn: 'blur'}"
+                    data-ng-minlength="5"
+                    data-ng-maxlength="5" />
+                </div>
+
+                <span data-ng-show="{{form_name}}.zip.$error.minlength ||
+                  {{form_name}}.zip.$error.maxlength" class="help-block">
+                    Zip Code is required to be 5 characters.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group"
+            data-ng-class="{'has-error': {{form_name}}.password.$dirty &amp;&amp;
+            {{form_name}}.password.$invalid,
+            'has-success': {{form_name}}.password.$dirty &amp;&amp;
+            {{form_name}}.password.$valid}"
+            data-ng-if="registering">
+
+            <label for="password">Password</label>
+            <input type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Password"
+              data-ng-model="user.password"
+              data-ng-model-options="{updateOn: 'blur'}"
+              data-ng-minlength="6"
+              required />
+
+            <span data-ng-show="{{form_name}}.password.$error.minlength"
+              class="help-block">
+                Password is required to be at least 6 characters.
+            </span>
+            <span data-ng-show="{{form_name}}.password.$dirty &amp;&amp;
+              {{form_name}}.password.$error.required" class="help-block">
+                Password is required.
+            </span>
+          </div>
+
+          <div class="form-group"
+            data-ng-class="{'has-error': {{form_name}}.password_confirmation.$dirty
+            &amp;&amp; {{form_name}}.password_confirmation.$invalid,
+            'has-success': {{form_name}}.password_confirmation.$dirty
+            &amp;&amp; {{form_name}}.password_confirmation.$valid}"
+            data-ng-if="registering">
+
+            <label for="password_confirmation">Password Confirmation</label>
+            <input type="password"
+              id="password_confirmation"
+              name="password_confirmation"
+              class="form-control"
+              placeholder="Password confirmation"
+              data-ng-model="user.password_confirmation"
+              data-ng-model-options="{debounce: 250}"
+              data-pc-compare-to="user.password"
+              required />
+
+            <span data-ng-show="{{form_name}}.password_confirmation.$dirty &amp;&amp;
+              {{form_name}}.password_confirmation.$error.required"
+              class="help-block">
+                Password confirmation is required.
+            </span>
+            <span data-ng-show="{{form_name}}.password_confirmation.$dirty &amp;&amp;
+              {{form_name}}.password_confirmation.$error.compareTo"
+              class="help-block">
+                Password and password confirmation must match.
+            </span>
+          </div>
+
+          <div class="form-actions">
+            <div class="form-group">
+<!-- have to use bind html and ngSanitize for btn text -->
+              <button id="{{id_name}}-btn" type="submit"
+                class="btn btn-primary col-md-12 margin-bottom"
+                data-ng-disabled="{{form_name}}.$invalid"
+                data-ng-bind-html="btn_text">
+              </button>
+            </div>
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-1" data-ng-if="registering">
+                Already have an account?
+                <a id="login-btn" class="btn btn-link" href="#/users/login">Login</a>
+              </div>
+              <div data-ng-if="!registering">
+                <a id="cancel-btn" class="btn btn-default col-md-12"
+                  href="#/users/{{user._id}}">Cancel</a>
+              </div>
+              <img data-ng-if="dataLoading" src="/img/shared/spinner.gif" />
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
